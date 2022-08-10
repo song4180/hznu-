@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dockers.docker.dao.ReportMapper">
+    <select id="listReported" resultType="com.dockers.docker.dto.ReportDTO">
+        select
+        r.reported_title,r.reported_detail,r.reported_image,u.user_name,u.user_student_number,r.create_time
+        FROM
+        reported_problem as r,user as u
+        where
+        r.user_id = u.user_id
+<!--        <if test="userName!=null and userName!=''">-->
+<!--            and user_name like concat('%',#{userName},'%')-->
+<!--        </if>-->
+<!--        <if test="userClass!=null and userClass!=''">-->
+<!--            and user_class like concat('%',#{userClass},'%')-->
+<!--        </if>-->
+        order by r.create_time DESC
+     </select>
+
+</mapper>

@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "jdbc.driver",
+      "type": "java.lang.String",
+      "description": "Description for jdbc.driver."
+<<<<<<< HEAD
+=======
+    },
+    {
+      "name": "mybatis-plus.global-config.db-config.field-strategy",
+      "type": "java.lang.String",
+      "description": "Description for mybatis-plus.global-config.db-config.field-strategy."
+>>>>>>> zxy
+    }
+  ] }

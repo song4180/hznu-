@@ -1,0 +1,74 @@
+.intro {
+  width: 75vw;
+  height: 30vh;
+}
+
+.introLeft {
+  width: 40%;
+  height: 30vh;
+  margin: 5px 0 0 1vw;
+}
+
+.introRight {
+  width: 40%;
+  height: 30vh;
+  margin: 5px 0 0 15px;
+}
+
+.introCon {
+  text-indent: 2em;
+  border: 1px #c0c0c0 solid;
+  height: 20vh;
+  width: 35vw;
+  padding: 7px;
+  line-height: 25px;
+  font-size: medium;
+}
+
+.firstPageRow {
+  margin-bottom: 10vh;
+}
+
+.BaseContent {
+  padding: 24px;
+  min-height: 650px;
+  background: rgb(255, 255, 255);
+}
+
+.uploadOutlined {
+  position: relative;
+  top: 2px;
+  right: 178px;
+  /* margin-bottom: -5px; */
+}
+
+.cHomeCon .ant-upload-list-item-name-icon-count-1 {
+  position: relative;
+  width: 20px;
+  top: -35px;
+  right: 100px;
+}
+
+.cHomeCon .ant-upload-list-item-name {
+  width: 130px;
+  padding-left: 26px;
+  overflow: hidden;
+  line-height: 1.5715;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uploadButton {
+  position: relative;
+  z-index: 1;
+  top: -30px;
+  right: 70px;
+  margin-bottom: -10px;
+}
+
+.ant-layout-footer {
+  margin-bottom: -30px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  background: #f0f2f5;
+}

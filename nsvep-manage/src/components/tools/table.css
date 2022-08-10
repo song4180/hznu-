@@ -1,0 +1,15 @@
+.table{
+    width:100% !important; 
+    padding-left: 15px;
+}
+
+.firstPageCol{
+    margin-left: 1vw;
+}
+
+#firstPageUpload{
+    margin: 0 auto ;
+    padding-left: 56vw;
+    float: right;
+    padding-bottom: 1vw;
+}

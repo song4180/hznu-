@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dockers.docker.dao.UserMapper">
+    <select id="queryUsers" resultType="com.dockers.docker.dto.UserDTO">
+        select u.user_id,u.user_name,u.user_student_number,u.user_class,c.class_name
+        from user as u,class as c
+        where u.class_id = c.class_id and c.admin_id = #{adminId} and u.is_deleted = 0 and c.is_end = 0
+        <if test="className!=null and className!=''">
+            and class_name like concat(#{className},'%')
+        </if>
+        <if test="userName!=null and userName!=''">
+            and user_name like concat(#{userName},'%')
+        </if>
+        order by user_student_number
+    </select>
+
+</mapper>

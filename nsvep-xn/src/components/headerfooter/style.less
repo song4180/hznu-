@@ -1,0 +1,162 @@
+
+
+.ant-menu-item, .ant-menu-submenu-title{
+    width: 20vw;
+    text-align: center;
+    background-color: #F8FCFC;
+    padding: 1vh 20px !important;
+    height:8vh;
+    font-size: 1.7rem;
+}
+
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    vertical-align: bottom;
+    border-bottom: 2px solid transparent;
+    width: 15vw;
+    margin-left: 2vw;
+}
+
+.title{
+    color: black;
+    font-family: "Arial Black";
+    font-size: 1.7rem;
+    float: left;
+}
+
+
+/* Navigation Start*/
+
+#mainNav {
+	position: absolute;
+	border-bottom: 1px solid #e9ecef;
+	background-color: white;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 800;
+	color: #3FBAC2;
+	font-size: 2rem;
+}
+
+#mainNav .navbar-toggler {
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 800;
+	padding: 13px;
+	text-transform: uppercase;
+	color: #343a40;
+}
+
+#mainNav a {
+	color:white;
+	font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin:0 2vw;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#mainNav a:hover {
+	color:#3FBAC2;
+}
+
+@media only screen and (min-width: 992px) {
+	#mainNav {
+		border-bottom: 1px solid transparent;
+		background: transparent;
+	}
+
+	#mainNav .navbar-brand {
+		padding: 10px 20px;
+		color: #fff;
+	}
+
+	#mainNav .navbar-brand:focus,
+	#mainNav .navbar-brand:hover  {
+		color: #3FBAC2;
+	}
+
+	#mainNav a {
+		padding: 10px 20px;
+		color: #fff;
+	}
+
+	#mainNav .navbar-nav>li.nav-item>a:focus,
+	#mainNav .navbar-nav>li.nav-item>a:hover {
+		color: #3FBAC2;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	#mainNav {
+		transition: background-color 0.5s;
+		min-height:8vh;
+	}
+
+	#mainNav a {
+		color:#3FBAC2;
+		font-size: 1.3rem;
+		font-weight: 800;
+		letter-spacing: 3px;
+		margin:0 2vw;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	#mainNav a:hover {
+		color:#5f9bf1;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	// #mainNav {
+	// 	transition: background-color 0.5s;
+	// 	transform: translate3d(0, 0, 0);
+	// 	-webkit-backface-visibility: hidden;
+	// }
+
+	#mainNav.is-fixed {
+		position: fixed;
+		top: -67px;
+		transition: transform 0.2s;
+		border-bottom: 2px solid white;
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+
+	#mainNav.is-fixed .navbar-brand {
+		color: #212529;
+	}
+
+	#mainNav.is-fixed .navbar-brand:focus,
+	#mainNav.is-fixed .navbar-brand:hover {
+		color: #0085A1;
+	}
+
+
+	#mainNav.is-fixed .navbar-nav>li.nav-item>a {
+		color: #212529;
+	}
+
+	#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
+	#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
+		color: #0085A1;
+	}
+	
+	/* 当js事件触发时，给nav增加 is-visible样式，效果是显示出nav 
+	其效果就相当于：
+	postion: fixed;
+	top:0;
+	但是transform 这里使用的是GPU渲染会看起来更加流畅。
+ */
+	#mainNav.is-visible {
+		transform: translate3d(0, 100%,0);
+	}
+}
+
+/* Navigation End*/
+

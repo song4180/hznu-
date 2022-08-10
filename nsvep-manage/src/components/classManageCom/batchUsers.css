@@ -1,0 +1,15 @@
+.batchUser .ant-upload-list-item-name-icon-count-1 {
+    margin-left: 20px;
+    position: inherit;
+    width: 20px;
+    top: -35px;
+    right: 100px;
+}
+.batchUser .ant-upload-list-item-name {
+    width: auto;
+    padding-left: inherit;
+    overflow: auto;
+    line-height: inherit;
+    white-space: inherit;
+    text-overflow: clip;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dockers.docker.dao.ExperimentMapper">
+    <update id="updateStateById">
+        update class_experiment
+        set is_closed = #{isClose}
+        where experiment_id = #{experimentId} and class_id = #{classId}
+    </update>
+    <select id="queryAll" resultType="com.dockers.docker.dto.ExperimentAdminDTO">
+        select e.experiment_id,e.experiment_title,e.experiment_describe,e.course_detail,ce.is_closed,e.image_id,c.class_name,c.class_id
+        FROM class as c,admin as a,experiment as e,class_experiment as ce
+        where c.class_id = ce.class_id
+          and ce.experiment_id = e.experiment_id
+          and c.admin_id = a.admin_id
+          and c.admin_id = #{adminId}
+          and c.is_end = 0
+          <if test="classId!=null">and c.class_id = #{classId}</if>
+    </select>
+    <select id="queryById" resultType="com.dockers.docker.entity.ClassExperiment">
+        select *
+        from class_experiment
+        where experiment_id = #{id}
+        and class_id = #{classId}
+    </select>
+    <select id="queryPageVO" resultType="com.dockers.docker.dto.ExperimentStuDTO">
+        select e.experiment_id,e.image_id,e.course_detail,e.experiment_describe,e.experiment_title,c.is_closed
+        FROM class_experiment as c,experiment as e,class
+        where c.class_id = #{classId} and c.experiment_id = e.experiment_id and c.class_id = class.class_id and class.is_end = 0
+    </select>
+</mapper>

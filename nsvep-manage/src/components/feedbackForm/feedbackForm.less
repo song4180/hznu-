@@ -1,0 +1,43 @@
+.dynamic-delete-button {
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  font-size: 24px;
+  color: #999;
+  transition: all 0.3s;
+}
+.dynamic-delete-button:hover {
+  color: #777;
+}
+.dynamic-delete-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.feedbackFormArea {
+  width: 80vw;
+  min-height: 70vh;
+  height:auto;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 10vh auto 10vh auto;
+  .feedbackFormAreaIn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5vh 20vw auto 5vw;
+    
+  }
+  #feedbackFormTitle{
+      margin-left: 5vw;
+  }
+  #submitFormBtn{
+    text-align:center;
+  }
+}
+.ant-menu-horizontal{
+    background-color: rgba(255, 255, 255, 0.0);
+}
+.ant-menu-item, .ant-menu-submenu-title .feedbackFormAreaItem{ 
+    background-color: rgba(255,255,255,0.1);
+}
+

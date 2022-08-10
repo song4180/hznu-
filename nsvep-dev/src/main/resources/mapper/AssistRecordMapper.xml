@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dockers.docker.dao.AssistRecordMapper">
+    <select id="queryAdminId" resultType="java.lang.Integer">
+        select C.admin_id
+        from admin as A,class as C,user as U
+        where U.user_id = #{userId} and U.class_id = C.class_id and C.admin_id = A.admin_id and is_end = 0
+    </select>
+    <select id="pageQueryAssist" resultType="com.dockers.docker.dto.AssistAdminDTO">
+        select AR.assist_id,AR.user_id,AR.is_assisted,AR.experiment_id,AR.create_time,U.user_name,U.user_student_number,E.experiment_title
+        from assist_record as AR,user as U,experiment as E
+        where AR.user_id = U.user_id and admin_id = #{adminId} and AR.experiment_id = E.experiment_id
+        order by AR.create_time
+    </select>
+    <select id="queryExperimentPort" resultType="java.lang.String">
+        select occupy_port
+        from experiment_record
+        where experiment_id = #{experimentId} and user_id = #{userId} and is_closed = 0
+    </select>
+</mapper>

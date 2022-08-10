@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.161ff550.chunk.css",
+    "main.js": "./static/js/main.cdf23278.chunk.js",
+    "main.js.map": "./static/js/main.cdf23278.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.133ea568.js",
+    "runtime-main.js.map": "./static/js/runtime-main.133ea568.js.map",
+    "static/css/2.13be1891.chunk.css": "./static/css/2.13be1891.chunk.css",
+    "static/js/2.678eb598.chunk.js": "./static/js/2.678eb598.chunk.js",
+    "static/js/2.678eb598.chunk.js.map": "./static/js/2.678eb598.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.122d8d9f285654ab323a586c51ed0bb3.js": "./precache-manifest.122d8d9f285654ab323a586c51ed0bb3.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.13be1891.chunk.css.map": "./static/css/2.13be1891.chunk.css.map",
+    "static/css/main.161ff550.chunk.css.map": "./static/css/main.161ff550.chunk.css.map",
+    "static/js/2.678eb598.chunk.js.LICENSE.txt": "./static/js/2.678eb598.chunk.js.LICENSE.txt",
+    "static/media/SExpForm.less": "./static/media/SExpForm.7dc7e8c3.less",
+    "static/media/bg.jpg": "./static/media/bg.0a530e2a.jpg",
+    "static/media/logo.svg": "./static/media/logo.6235e58b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.133ea568.js",
+    "static/css/2.13be1891.chunk.css",
+    "static/js/2.678eb598.chunk.js",
+    "static/css/main.161ff550.chunk.css",
+    "static/js/main.cdf23278.chunk.js"
+  ]
+}

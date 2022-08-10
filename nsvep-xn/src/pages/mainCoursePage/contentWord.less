@@ -1,0 +1,51 @@
+#contentWordSpace{
+    // background-color: rgba(202, 49, 49, 1);
+    
+    margin-top: -16px;
+    .contentWordStart{
+        font-weight: bold;
+        font-size: 1.5rem;
+        a{
+            display: inline-block;
+            color: white;
+            margin-top: 1vh;
+        }
+    }
+    img{
+        width: 2vw;
+        height:2vw;
+        margin: auto 1vw auto 1vw;
+    }
+}
+
+#hidebg { position:absolute;left:0px;top:0px;
+
+    background-color:#000;
+
+    width:100%; /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+
+    filter:alpha(opacity=60); /*设置透明度为60%*/
+
+    opacity:0.6; /*非IE浏览器下设置透明度为60%*/
+
+    display:none; /* http://www.jb51.net */
+
+    z-Index:2;
+}
+
+#expCard{
+    margin-top: 3vh;
+}
+
+#contentWordSpace .ant-row {
+    position: relative;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    zoom: 1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
